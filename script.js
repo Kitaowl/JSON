@@ -5,6 +5,7 @@ const versionSelect = document.querySelector("#versionSelect");
 
 let jsonData = [];
 
+// Wczytania pliku JSON
 input.addEventListener("change", function (event) {
   const file = event.target.files[0];
   if (!file) return;
@@ -13,20 +14,23 @@ input.addEventListener("change", function (event) {
 
   reader.onload = function (e) {
     try {
+      // Parsowanie JSON
       jsonData = JSON.parse(e.target.result);
 
-      // Dostajemy wersje unikalne
+      // Wyciągnięcie unikalnych wersji
       const versions = [
         ...new Set(
           jsonData.map((item) => item.version).filter((v) => v !== undefined)
         ),
       ];
 
+      // Jeśli nie ma wersji
       if (versions.length === 0) {
         alert("Brak wersji w pliku JSON.");
         return;
       }
 
+      // Wypełnienie selecta wersjami
       versionSelect.innerHTML = '<option value="">Wybierz wersję</option>';
       versions.forEach((ver) => {
         const option = document.createElement("option");
@@ -46,6 +50,7 @@ input.addEventListener("change", function (event) {
   reader.readAsText(file);
 });
 
+// Generowanie strony po kliknięciu
 button.addEventListener("click", function () {
   const selectedVersion = parseInt(versionSelect.value);
   if (!selectedVersion) {
@@ -53,10 +58,12 @@ button.addEventListener("click", function () {
     return;
   }
 
+  // Filtrowanie danych według wersji
   const elements = jsonData.filter((item) => item.version === selectedVersion);
   generujStrone(elements);
 });
 
+// Funkcja do dynamicznego tworzenia elementów HTML na stronie
 function generujStrone(elements) {
   container.innerHTML = "";
 
@@ -65,7 +72,7 @@ function generujStrone(elements) {
 
     const el = document.createElement(element.type);
 
-    // Wspiera zarówno "text", jak i "content"
+    // Obsługuje zarówno "text", jak i "content"
     if (element.text) el.textContent = element.text;
     if (element.content) el.textContent = element.content;
     if (element.href) el.href = element.href;
