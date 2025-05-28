@@ -1,0 +1,27 @@
+[
+  {
+    "type": "h2",
+    "text": "Kontakt z nami",
+    "class": "naglowek2",
+    "version": 1
+  },
+  {
+    "type": "p",
+    "text": "Możesz się z nami skontaktować mailowo.",
+    "class": "opis2",
+    "version": 1
+  },
+  {
+    "type": "a",
+    "text": "Napisz do nas",
+    "href": "mailto:kontakt@example.com",
+    "class": "link2",
+    "version": 1
+  },
+  {
+    "type": "h2",
+    "text": "Druga wersja kontaktu",
+    "class": "naglowek2",
+    "version": 2
+  }
+]

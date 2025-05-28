@@ -1,0 +1,77 @@
+.styl1 {
+  color: darkblue;
+  font-size: 2rem;
+}
+
+.styl2 {
+  color: darkgreen;
+  font-style: italic;
+}
+
+.styl3 {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.styl3:hover {
+  text-decoration: underline;
+}
+
+.naglowek {
+  color: navy;
+  font-size: 2.5rem;
+}
+
+.opis {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.link {
+  color: darkred;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.naglowek2 {
+  font-size: 2rem;
+  color: darkgreen;
+}
+
+.opis2 {
+  color: gray;
+}
+
+.link2 {
+  color: blue;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+#generateBtn {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(70, 70, 199);
+  color: white;
+}
+
+#generateBtn:hover {
+  background-color: rgb(80, 80, 147);
+}
+
+#headeeer {
+  padding: 15px;
+  margin: 200px;
+  background-color: rgb(247, 217, 217);
+  box-shadow: 0 4px 8px black;
+  border-radius: 10px;
+}

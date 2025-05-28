@@ -1,0 +1,30 @@
+[
+  {
+    "type": "header",
+    "version": 1
+  },
+  {
+    "type": "h1",
+    "content": "Witam na mojej stronie!",
+    "version": 1
+  },
+  {
+    "type": "p",
+    "content": "To jest przykład opisu",
+    "class": "opis",
+    "version": 1
+  },
+  {
+    "type": "a",
+    "content": "Link",
+    "href": "https://example.com",
+    "class": "link",
+    "version": 1
+  },
+  {
+    "type": "h2",
+    "content": "Witaj w wersji 2",
+    "class": "naglowek2",
+    "version": 2
+  }
+]
