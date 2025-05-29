@@ -50,7 +50,7 @@ input.addEventListener("change", function (event) {
   reader.readAsText(file);
 });
 
-// Generowanie strony po kliknięciu
+// Opcje wyboru wersji
 button.addEventListener("click", function () {
   const selectedVersion = parseInt(versionSelect.value);
   if (!selectedVersion) {
