@@ -22,10 +22,6 @@ input.addEventListener("change", function (event) {
       jsonData = JSON.parse(e.target.result);
 
       // Wyciągnięcie unikalnych wersji z danych:
-      // 1. Mapujemy tablicę do tablicy wersji
-      // 2. Filtrujemy, aby usunąć undefined
-      // 3. Używamy Set, aby wyeliminować duplikaty
-      // 4. Rozprzestrzeniamy Set z powrotem do tablicy
       const versions = [
         ...new Set(
           jsonData.map((item) => item.version).filter((v) => v !== undefined)
